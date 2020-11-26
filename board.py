@@ -47,7 +47,8 @@ def canPlay(conindex):
     
 
                     
-
+    return canPlay(2)
+    
 
 
 
