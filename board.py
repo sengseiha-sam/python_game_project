@@ -33,22 +33,29 @@ def setSign(col,sign):
     return array_of_board
 
 def canPlay(conindex):
-    IsTrue = False
+    IsTrue = True
     
     
     
     if array_of_board[5][conindex] == 'A' or array_of_board[5][conindex] == "B":
-         if array_of_board[4][conindex] == 'A' or array_of_board[4][conindex] == "B":
+        
+        if array_of_board[4][conindex] == 'A' or array_of_board[4][conindex] == "B":
+        
+    
             if array_of_board[3][conindex] == 'A' or array_of_board[3][conindex] == "B":
+         
+    
+        
                 if array_of_board[2][conindex] == 'A' or array_of_board[2][conindex] == "B":
                     IsTrue = False
-                else:
-                    IsTrue = True
+    
+    
+    
     
 
                     
-    return canPlay(2)
-    
+    return IsTrue
+print(canPlay(2))    
 
 
 
