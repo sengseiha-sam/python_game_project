@@ -32,21 +32,21 @@ def setSign(col,sign):
             
     return array_of_board
 
-def canPlay(conindex):
+def canPlay(colindex):
     IsTrue = True
     
     
     
-    if array_of_board[5][conindex] == 'A' or array_of_board[5][conindex] == "B":
+    if array_of_board[5][colindex] == 'A' or array_of_board[5][colindex] == "B":
         
-        if array_of_board[4][conindex] == 'A' or array_of_board[4][conindex] == "B":
+        if array_of_board[4][colindex] == 'A' or array_of_board[4][colindex] == "B":
         
     
-            if array_of_board[3][conindex] == 'A' or array_of_board[3][conindex] == "B":
+            if array_of_board[3][colindex] == 'A' or array_of_board[3][colindex] == "B":
          
     
         
-                if array_of_board[2][conindex] == 'A' or array_of_board[2][conindex] == "B":
+                if array_of_board[2][colindex] == 'A' or array_of_board[2][colindex] == "B":
                     IsTrue = False
     
     
@@ -68,7 +68,65 @@ def clearboard():
                 array_of_board[i][j] = 0   
 clearboard()
 
+def play(Isred, colindex):
+    
+    Isred == "Player RED" == True 
+    
+    
+    
+    if Isred:
+        if array_of_board[5][colindex] ==0:
+            array_of_board[5][colindex] = "A"
+        
+        
+        elif array_of_board[4][colindex]==0:
+            array_of_board[4][colindex] = "A"
+        
+        elif(array_of_board[3][colindex]) == 0:
+            array_of_board[3][colindex] = "A"
 
+         elif(array_of_board[2][colindex]) == 0:
+            array_of_board[2][colindex] = "a"
+       
+        
+        elif(array_of_board[1][colindex]) == 0:
+        
+            array_of_board[1][colindex] = "A"
+        
+         elif(array_of_board[0][colindex]) == 0:
+            array_of_board[0][colindex] = "A"
+       
+        
+    else:
 
+        if(array_of_board[5][colindex]) == 0:
+            array_of_board[5][colindex] = "B"
+        
+        elif(array_of_board[4][colindex]) == 0:
+            array_of_board[4][colindex] = "B"
+        
+        
+        elif(array_of_board[3][colindex]) == 0:
+            array_of_board[3][colindex] = "B"
 
+        elif(array_of_board[2][colindex]) == 0:
+            array_of_board[2][colindex] = "B"
+        
+        elif(array_of_board[1][colindex]) == 0:
+            array_of_board[0][colindex] = "B"
+        
+        
+        
 
+       
+                
+        elif array_of_board[1][colindex] == 0:
+        
+            array_of_board[1][colindex] = "B"
+    return array_of_board
+Isred = input ('the name of player')
+colindex = int(input('the column index'))
+print(play(Isred,colindex))
+
+        
+        
