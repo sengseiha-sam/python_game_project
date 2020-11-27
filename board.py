@@ -59,9 +59,14 @@ print(canPlay(2))
 
 
 
-
-    
-    
+def clearboard():
+    rows = 6
+    cols = 7
+    for i in range(rows):
+        for j in range(cols):
+            if array_of_board[i][j] != 0:
+                array_of_board[i][j] = 0   
+clearboard()
 
 
 
